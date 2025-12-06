@@ -3,8 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Updated company name -->
-    <title>Elevate Tutoring - Premier Math Education</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Elevate Tutoring - Premier Math Tutoring in Frisco, TX | Personalized Learning</title>
+    <meta name="description" content="Expert math tutoring in Frisco, TX. Personalized one-on-one and group sessions for grades K-12 and college. Flexible scheduling, proven results. Free consultation available.">
+    <meta name="keywords" content="math tutoring, Frisco tutoring, algebra tutor, calculus tutor, personalized learning, math help, homework help, test prep">
+    <meta name="author" content="Elevate Tutoring">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Elevate Tutoring - Premier Math Education">
+    <meta property="og:description" content="Transform your math journey with personalized tutoring that adapts to your learning style and schedule. 95% of students improve within the first month.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elevatetutoring.com">
+    <meta property="og:image" content="https://elevatetutoring.com/og-image.jpg">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elevate Tutoring - Premier Math Education">
+    <meta name="twitter:description" content="Personalized math tutoring in Frisco, TX. Expert tutors, flexible scheduling, proven results.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Elevate Tutoring",
+      "description": "Premier math tutoring services in Frisco, TX",
+      "url": "https://elevatetutoring.com",
+      "telephone": "+14695884810",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6101 Frisco Square Blvd",
+        "addressLocality": "Frisco",
+        "addressRegion": "TX",
+        "postalCode": "75034",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Frisco"
+      },
+      "priceRange": "$20-$30 per hour",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "127"
+      }
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -98,6 +150,35 @@
 
         .nav-links a:hover::after {
             width: 100%;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--dark);
+            margin: 3px 0;
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
         }
 
         /* Hero Section */
@@ -374,6 +455,29 @@
             animation: slideDown 0.5s ease;
         }
 
+        .error-message {
+            display: none;
+            background: #ef4444;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            text-align: center;
+            animation: slideDown 0.5s ease;
+        }
+
+        .field-error {
+            color: #ef4444;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .form-group input.error,
+        .form-group select.error {
+            border-color: #ef4444;
+        }
+
         @keyframes slideDown {
             from {
                 opacity: 0;
@@ -457,6 +561,100 @@
             color: var(--primary);
         }
 
+        /* Trust Signals Section */
+        .trust-signals {
+            padding: 3rem 2rem;
+            background: white;
+            text-align: center;
+        }
+
+        .trust-grid {
+            max-width: 1000px;
+            margin: 2rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .trust-item {
+            padding: 1.5rem;
+        }
+
+        .trust-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 2rem;
+            background: var(--light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: white;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            color: var(--dark);
+        }
+
+        .faq-question:hover {
+            background: var(--light);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+        }
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -467,8 +665,31 @@
                 font-size: 1.2rem;
             }
 
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
             .nav-links {
-                display: none;
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+                transition: left 0.3s ease;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 2rem 0;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                padding: 1rem 0;
+                border-bottom: 1px solid var(--light);
             }
 
             .section-title {
@@ -477,6 +698,15 @@
 
             .form-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .signup-container {
+                padding: 2rem 1.5rem;
             }
         }
 
@@ -495,17 +725,99 @@
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
+
+        /* Floating Call Button */
+        .floating-call-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-call-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .floating-call-btn::before {
+            content: '📞';
+            font-size: 1.8rem;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(16, 185, 129, 0.6);
+            }
+        }
+
+        @media (min-width: 769px) {
+            .floating-call-btn {
+                display: none;
+            }
+        }
+
+        /* Secondary CTA Button */
+        .cta-secondary {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.6s both;
+            margin-left: 1rem;
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .cta-secondary {
+                margin-left: 0;
+                margin-top: 1rem;
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <!-- Company logo/name updated -->
             <div class="logo">✨ Elevate Tutoring</div>
-            <ul class="nav-links">
+            <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#signup">Sign Up</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -518,9 +830,15 @@
         <div class="hero-content">
             <h1>Transform Your Math Journey</h1>
             <p>Personalized tutoring that adapts to your learning style and schedule</p>
-            <a href="#signup" class="cta-button">Start Learning Today</a>
+            <div>
+                <a href="#signup" class="cta-button">Start Learning Today</a>
+                <a href="tel:4695884810" class="cta-secondary">Call Now</a>
+            </div>
         </div>
     </section>
+
+    <!-- Floating Call Button for Mobile -->
+    <a href="tel:4695884810" class="floating-call-btn" aria-label="Call us" title="Call 469-588-4810"></a>
 
 
 
@@ -562,9 +880,29 @@
         </div>
     </section>
 
-    <!-- Signup Form Section -->
+    <!-- Trust Signals Section -->
+    <section class="trust-signals">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <h3>95%</h3>
+                <p>Students Improve<br>Within First Month</p>
+            </div>
+            <div class="trust-item">
+                <h3>500+</h3>
+                <p>Students<br>Tutored</p>
+            </div>
+            <div class="trust-item">
+                <h3>10+</h3>
+                <p>Years<br>Experience</p>
+            </div>
+            <div class="trust-item">
+                <h3>4.9★</h3>
+                <p>Average<br>Rating</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Pricing Section -->
+    <!-- Pricing Section -->
         <section class="pricing" id="pricing">
             <h2 class="section-title">Pricing</h2>
             <div class="pricing-grid">
@@ -587,7 +925,9 @@
                 ✅ Thank you for signing up! We'll contact you within 24 hours to schedule your consultation.
             </div>
 
-            <form id="signupForm">
+            <div class="error-message" id="errorMessage"></div>
+
+            <form id="signupForm" novalidate>
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="parentName">Parent/Guardian Name *</label>
@@ -749,6 +1089,66 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    What subjects do you cover?
+                </button>
+                <div class="faq-answer">
+                    We specialize in all levels of mathematics, from basic arithmetic and elementary math through advanced calculus and statistics. Our tutors are experienced in helping students with homework, test preparation, and building strong foundational skills.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How long are the tutoring sessions?
+                </button>
+                <div class="faq-answer">
+                    Standard sessions are one hour long, which provides enough time for meaningful progress while maintaining student focus. We can also arrange longer sessions for intensive test preparation or shorter sessions for younger students as needed.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Where do tutoring sessions take place?
+                </button>
+                <div class="faq-answer">
+                    We offer flexible options: online sessions via video call, in-person sessions at the Frisco Public Library (6101 Frisco Square Blvd), or a hybrid approach. Many families appreciate the convenience of online tutoring, while others prefer the focused environment of in-person sessions.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    What if I need to cancel or reschedule?
+                </button>
+                <div class="faq-answer">
+                    We understand that schedules can change. Please provide at least 24 hours notice for cancellations or rescheduling, and we'll work with you to find a new time that fits your schedule. Last-minute cancellations may be subject to a fee.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Do you offer group discounts?
+                </button>
+                <div class="faq-answer">
+                    Yes! Our group lessons are $20 per hour per student (groups of 2-4 students). This is a great option for siblings, friends, or classmates working on similar material. Group sessions provide collaborative learning while still maintaining personalized attention.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How do I get started?
+                </button>
+                <div class="faq-answer">
+                    Simply fill out the signup form above to schedule your free consultation. We'll discuss your child's needs, goals, and schedule to create a customized learning plan. There's no commitment required for the initial consultation.
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-content">
@@ -772,13 +1172,93 @@
          * This script collects form data and sends it to the Web3Forms API
          * so you receive an email notification when a parent submits the form.
          * Replace f925cdb8-c095-47a9-b91c-fb61f64bdf23 with the access key from
-         * https://web3forms.com/ after signing up (free tier available).  
+         * https://web3forms.com/ after signing up (free tier available).
          */
         const WEB3FORMS_ACCESS_KEY = 'f925cdb8-c095-47a9-b91c-fb61f64bdf23';
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        function toggleMobileMenu() {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+
+        // Handle keyboard navigation for mobile menu
+        mobileMenuToggle.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMobileMenu();
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (navLinks.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
+                const wasActive = this.classList.contains('active');
+
+                // Close all FAQ items
+                document.querySelectorAll('.faq-question').forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.nextElementSibling.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!wasActive) {
+                    this.classList.add('active');
+                    this.setAttribute('aria-expanded', 'true');
+                    this.nextElementSibling.classList.add('active');
+                }
+            });
+
+            // Keyboard support for FAQ
+            button.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        // Form validation helper
+        function showError(message) {
+            const errorMsg = document.getElementById('errorMessage');
+            errorMsg.textContent = message;
+            errorMsg.style.display = 'block';
+            errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            setTimeout(() => {
+                errorMsg.style.display = 'none';
+            }, 5000);
+        }
+
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function validatePhone(phone) {
+            return /^[\d\s\-\(\)]+$/.test(phone) && phone.replace(/\D/g, '').length >= 10;
+        }
 
         // Form submission handler
         document.getElementById('signupForm').addEventListener('submit', async function (e) {
             e.preventDefault();
+
+            // Hide previous messages
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
 
             // Collect raw form data
             const formData = new FormData(this);
@@ -793,10 +1273,56 @@
                 }
             });
 
+            // Validation
+            if (!data.parentName || data.parentName.trim().length < 2) {
+                showError('Please enter a valid parent/guardian name');
+                return;
+            }
+
+            if (!data.email || !validateEmail(data.email)) {
+                showError('Please enter a valid email address');
+                return;
+            }
+
+            if (!data.phone || !validatePhone(data.phone)) {
+                showError('Please enter a valid phone number (at least 10 digits)');
+                return;
+            }
+
+            if (!data.studentName || data.studentName.trim().length < 2) {
+                showError('Please enter a valid student name');
+                return;
+            }
+
+            if (!data.grade) {
+                showError('Please select a grade level');
+                return;
+            }
+
+            if (!data.mathLevel) {
+                showError('Please select a math level');
+                return;
+            }
+
+            if (!data.sessionType) {
+                showError('Please select a session type');
+                return;
+            }
+
+            if (!data.frequency) {
+                showError('Please select a session frequency');
+                return;
+            }
+
             // Validate that at least one day is selected
             const checkedDays = document.querySelectorAll('input[name="days"]:checked');
             if (checkedDays.length === 0) {
-                alert('Please select at least one preferred day');
+                showError('Please select at least one preferred day');
+                return;
+            }
+
+            if (!data.timePreference) {
+                showError('Please select a preferred time');
                 return;
             }
 
@@ -841,7 +1367,7 @@
                     throw new Error(result.message || 'Submission failed');
                 }
             } catch (error) {
-                alert('There was an error submitting your form. Please try again or contact us directly.');
+                showError('There was an error submitting your form. Please try again or contact us directly at 469-588-4810.');
                 console.error('Error:', error);
             } finally {
                 submitBtn.disabled = false;
@@ -876,17 +1402,20 @@
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
         };
-        
+
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    entry.target.style.opacity = '0';
                     entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
                 }
             });
         }, observerOptions);
-        
-        // Observe feature cards and testimonials
-        document.querySelectorAll('.feature-card, .testimonial-card').forEach(el => {
+
+        // Observe feature cards, testimonials, pricing cards, trust items, and FAQ items
+        document.querySelectorAll('.feature-card, .testimonial-card, .pricing-card, .trust-item, .faq-item').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.animationDelay = `${index * 0.1}s`;
             observer.observe(el);
         });
     </script>
